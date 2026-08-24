@@ -1,0 +1,80 @@
+/* Webgewerk — Design-Tokens
+   Quelle: Refero Style „Apple (España) design system"
+   Wer den Look ändern will, ändert diese Datei. Sonst nichts. */
+
+:root {
+  /* ---------- Farbe ---------- */
+  --c-accent:      #0071e3;  /* nur gefüllte CTA-Buttons */
+  --c-accent-deep: #0064c8;  /* Hover */
+  --c-link:        #0066cc;  /* Inline-Links */
+  --c-ember:       #b64400;  /* Badge */
+
+  --c-ink:         #1d1d1f;
+  --c-ink-2:       #474747;
+  --c-ink-3:       #707070;
+  --c-ink-4:       #86868b;
+  --c-hairline:    #d6d6d6;
+
+  --s-0:           #ffffff;  /* Seite, Karten */
+  --s-1:           #f5f5f7;  /* alternierende Bänder, Footer */
+  --s-2:           #e8e8ed;  /* Hover-Flächen */
+  --s-3:           #fafafc;  /* Nav nach dem Scrollen */
+
+  /* Finish-Töne — tragen die Farbe der Seite */
+  --f-sky:         #c8d8e0;
+  --f-citrus:      #dddc8c;
+  --f-starlight:   #f0e4d3;
+  --f-silver:      #e3e4e5;
+  --f-blush:       #e8d0d0;
+  --f-indigo:      #596680;
+  --f-midnight:    #2e3642;
+
+  /* ---------- Schrift ---------- */
+  /* System-Stack: SF Pro auf Apple-Geräten, sonst die jeweilige System-Grotesk.
+     Bewusst ohne Google Fonts — nichts wird von fremden Servern nachgeladen.
+     Wer Inter erzwingen will, legt die woff2-Dateien unter assets/fonts/ ab
+     und ergänzt hier eine @font-face-Regel. */
+  --font-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                  "Inter", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-text:    "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                  "Inter", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --t-display:     clamp(44px, 8.2vw, 96px);
+  --t-heading-lg:  clamp(38px, 6.6vw, 80px);
+  --t-heading:     clamp(32px, 5vw, 56px);
+  --t-heading-sm:  clamp(26px, 3.4vw, 40px);
+  --t-body-lg:     clamp(21px, 2.2vw, 28px);
+  --t-body:        21px;
+  --t-body-sm:     17px;
+  --t-caption:     14px;
+  --t-micro:       12px;
+
+  --lh-display: 1.04;
+  --lh-heading: 1.07;
+  --lh-body:    1.47;
+
+  --ls-display: -1.44px;
+  --ls-heading: -0.28px;
+  --ls-body:    -0.374px;
+
+  /* ---------- Raster ---------- */
+  --sp-1:  4px;   --sp-2:  8px;   --sp-3: 12px;  --sp-4: 16px;
+  --sp-5: 20px;   --sp-6: 24px;   --sp-7: 28px;  --sp-8: 32px;
+  --sp-10: 40px;  --sp-11: 44px;  --sp-12: 48px; --sp-13: 52px;
+  --sp-19: 76px;  --sp-20: 80px;  --sp-30: 120px; --sp-36: 144px;
+
+  --page:      1200px;
+  --page-pad:  22px;
+  --section:   clamp(72px, 10vw, 120px);
+  --card-pad:  28px;
+
+  /* ---------- Radien ---------- */
+  --r-link:   10px;
+  --r-card:   28px;
+  --r-badge:  36px;
+  --r-pill:   980px;
+
+  /* ---------- Bewegung ---------- */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur:  0.4s;
+}

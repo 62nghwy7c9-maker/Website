@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Produktdarstellung auf gelbgrüner Fläche: zwei schwebende Metallplatten">
+  <defs>
+    <linearGradient id="a1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdfdfd"/>
+      <stop offset="0.5" stop-color="#e9ebe6"/>
+      <stop offset="1" stop-color="#dcdfd8"/>
+    </linearGradient>
+    <linearGradient id="a2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c9ccc4"/>
+      <stop offset="0.25" stop-color="#f7f8f5"/>
+      <stop offset="0.62" stop-color="#e2e5de"/>
+      <stop offset="1" stop-color="#c9ccc4"/>
+    </linearGradient>
+    <linearGradient id="aSeam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0071e3" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#0071e3"/>
+      <stop offset="1" stop-color="#0071e3" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#dddc8c"/>
+  <ellipse cx="400" cy="474" rx="196" ry="17" fill="#1d1d1f" opacity="0.07"/>
+
+  <!-- untere Platte -->
+  <rect x="230" y="330" width="340" height="104" rx="34" fill="url(#a1)"/>
+  <rect x="230" y="330" width="340" height="104" rx="34" fill="url(#a2)" opacity="0.45"/>
+  <rect x="230.6" y="330.6" width="338.8" height="102.8" rx="33.4" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+
+  <!-- Fuge zwischen den Platten -->
+  <rect x="266" y="312" width="268" height="3" rx="1.5" fill="url(#aSeam)"/>
+
+  <!-- obere Platte, leicht versetzt -->
+  <rect x="248" y="196" width="340" height="104" rx="34" fill="url(#a1)"/>
+  <rect x="248" y="196" width="340" height="104" rx="34" fill="url(#a2)" opacity="0.45"/>
+  <rect x="248.6" y="196.6" width="338.8" height="102.8" rx="33.4" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+  <rect x="284" y="222" width="118" height="6" rx="3" fill="#c8ccc3"/>
+  <rect x="284" y="242" width="196" height="6" rx="3" fill="#d8dbd2"/>
+  <circle cx="542" cy="248" r="7" fill="#0071e3"/>
+</svg>

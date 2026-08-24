@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-label="Produktdarstellung: ein mattes Aluminiumobjekt mit blauer Lichtfuge">
+  <defs>
+    <linearGradient id="hBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdfdfe"/>
+      <stop offset="0.34" stop-color="#eceef1"/>
+      <stop offset="0.62" stop-color="#dfe2e7"/>
+      <stop offset="1" stop-color="#f2f3f5"/>
+    </linearGradient>
+    <linearGradient id="hEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c9ced6"/>
+      <stop offset="0.18" stop-color="#f6f7f9"/>
+      <stop offset="0.5" stop-color="#dcdfe5"/>
+      <stop offset="0.84" stop-color="#f6f7f9"/>
+      <stop offset="1" stop-color="#c9ced6"/>
+    </linearGradient>
+    <linearGradient id="hSeam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0071e3" stop-opacity="0"/>
+      <stop offset="0.22" stop-color="#0071e3" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#5aaeff"/>
+      <stop offset="0.78" stop-color="#0071e3" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#0071e3" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="hGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0071e3" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#0071e3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hSheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="hClip">
+      <rect x="230" y="196" width="740" height="368" rx="52"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="760" fill="#ffffff"/>
+
+  <!-- Reflexion unter dem Objekt, hochkey und weich -->
+  <ellipse cx="600" cy="612" rx="330" ry="26" fill="#1d1d1f" opacity="0.05"/>
+  <ellipse cx="600" cy="606" rx="196" ry="13" fill="#1d1d1f" opacity="0.05"/>
+
+  <!-- Körper -->
+  <rect x="230" y="196" width="740" height="368" rx="52" fill="url(#hBody)"/>
+  <rect x="230" y="196" width="740" height="368" rx="52" fill="url(#hEdge)" opacity="0.5"/>
+  <g clip-path="url(#hClip)">
+    <rect x="230" y="196" width="740" height="200" fill="url(#hSheen)" opacity="0.55"/>
+    <!-- Lichtfuge -->
+    <rect x="150" y="356" width="900" height="130" fill="url(#hGlow)"/>
+    <rect x="262" y="418" width="676" height="3.5" rx="1.75" fill="url(#hSeam)"/>
+    <rect x="262" y="418" width="676" height="1.2" rx="0.6" fill="#ffffff" opacity="0.75"/>
+    <!-- feine Fräskante -->
+    <rect x="262" y="252" width="676" height="1" fill="#ffffff" opacity="0.85"/>
+    <circle cx="600" cy="330" r="27" fill="none" stroke="#c4c9d1" stroke-width="1.4"/>
+    <circle cx="600" cy="330" r="9" fill="#dfe3e8"/>
+  </g>
+  <rect x="230.6" y="196.6" width="738.8" height="366.8" rx="51.4" fill="none"
+        stroke="#ffffff" stroke-width="1.2" opacity="0.9"/>
+</svg>
