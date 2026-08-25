@@ -4,7 +4,9 @@ Quelle: Refero, „Apple (España) design system"
 <https://styles.refero.design/style/c9cabb96-32fa-4896-837a-f2497ce1c856>
 Abgerufen am 25.08.2026.
 
-Das hier ist die **vollständige Vorlage**, so wie Refero sie liefert. `DESIGN.md`
+Das hier ist die **vollständige Vorlage**, so wie Refero sie liefert — die redaktionelle
+Fassung in den Abschnitten 1–7, die gemessenen Rohdaten in Abschnitt 8. Die Rohdaten
+liegen zusätzlich maschinenlesbar in `reference-style.json` (Referos eigene Extraktion). `DESIGN.md`
 daneben ist die verdichtete Fassung, nach der die Seite tatsächlich gebaut wurde —
 sie enthält nur, was für dieses Projekt gebraucht wurde. Wenn die Seite erweitert
 wird, ist dieses Dokument die Quelle.
@@ -245,7 +247,94 @@ zur grafischen Form flach wird statt körperlich zu wirken.
 
 ---
 
-## 8 Bekannte Fehler in der Vorlage
+## 8 Gemessene Rohdaten
+
+Die Abschnitte 1–7 geben die **redaktionelle** Fassung von Refero wieder. Daneben
+liefert die Seite gemessene Rohdaten, die direkt aus der Originalseite ausgelesen
+wurden. Sie liegen vollständig in `reference-style.json`. Herkunft laut `meta`:
+
+| Feld | Wert |
+|---|---|
+| Quelle | `https://www.apple.com/macbook-neo` |
+| Site | Apple (España) |
+| Erfasst am | 03.07.2026 |
+| Viewport | 1440 × 900 |
+| Erfasste Elemente | 1505 |
+
+Wo redaktionelle Fassung und Messung sich widersprechen, gilt die Messung.
+
+### Was die Messung ergänzt oder korrigiert
+
+**Laufweite steht im Original in `em`, nicht in px.** Die px-Werte aus Abschnitt 2
+sind korrekte Umrechnungen, aber `em` ist die Quelle und skaliert mit:
+96px → −0.015em · 80px → −0.015em · 56px → −0.005em · 28px → +0.007em ·
+21px → +0.011em · 17px → −0.022em · 14px → −0.016em · 12px → −0.01em.
+
+**Die Display-Zeile mit 96px hat Gewicht 600, nicht 700.** Gewicht 700 ist gemessen
+bei 80px, 56px und 32px. Die DO-Liste der Vorlage behauptet „700 bei 80–96px" und
+widerspricht damit der eigenen Messung.
+
+**Die Typo-Skala hat 30 Stufen, nicht 10.** Die zehn aus Abschnitt 2 sind eine
+kuratierte Auswahl. Die Messung nennt zu jeder Stufe zusätzlich Kontext und
+Häufigkeit. Die mit Abstand häufigste Stufe ist 17px / 400 / 1.47 / −0.022em
+(664 Vorkommen) — das ist tatsächlich das Arbeitspferd. Danach 12px / 400 (267)
+und 17px / 600 / 1.24 (117).
+
+**Die Abstandsskala hat 54 Werte, nicht 16:**
+2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 20 21 22 24 25 27 28 30 32 34 37 40 44
+48 52 54 76 80 88 89 90 100 104 105 110 119 120 144 160 195 201 208 216 222 223
+277 298. Basiseinheit 4px, Dichte „comfortable".
+
+**Radien nach gemessener Häufigkeit:** 28px (70×, Karten/Bilder/Buttons/Links) ·
+9999px (17×) · 36px (8×, **Buttons** — nicht Badges, wie die redaktionelle Fassung
+sagt) · 10px (7×, Links) · 999px (7×) · 980px (4×) · 32px (1×).
+
+**Schatten: leeres Array.** Die Regel „keine Schatten" ist keine Interpretation,
+sondern ein Messergebnis — auf 1505 Elementen kommt kein einziger Schatten vor.
+
+**`font-feature-settings: "numr"`** ist für beide Schriftfamilien gemessen.
+
+**20 Kontrastpaare, alle auf Stufe AAA.** Die niedrigste dokumentierte Paarung
+liegt bei 11,51:1 (`#e8d0d0` auf `#1d1d1f`). Das System kennt keine grenzwertigen
+Kombinationen.
+
+**23 Farb-Tokens statt 20**, jeweils mit Kontext, Häufigkeit und CSS-Eigenschaft.
+Bemerkenswert: `#0071e3` kommt auf der ganzen Seite nur **3×** vor, ausschließlich
+als `backgroundColor`. Drei weitere Farben (`#00a1b3`, `#8668ff`, `#ed6300`)
+erscheinen je genau einmal und sind Fremdkörper — vermutlich aus eingebetteten
+Fremdinhalten, nicht Teil des Systems.
+
+### Was der Screenshot zeigt
+
+Refero hinterlegt einen Screenshot der Originalseite. Darauf ist erkennbar:
+
+**Der Haupt-CTA im Hero ist schwarz, nicht blau.** Der „Comprar"-Button ist eine
+Pille in `#1d1d1f` mit weißer Schrift. Blau erscheint auf der sichtbaren Fläche nur
+als Inline-Link im Promo-Band darüber. Die Regel „`#0071e3` für gefüllte CTAs" aus
+der DO-Liste beschreibt also nicht, was die Referenzseite im Hero tatsächlich tut.
+
+Für diese Website wurde bewusst der **blauen Regel** gefolgt, nicht dem Screenshot —
+eine schwarze Pille wäre die zurückhaltendere Alternative und ist ein Einzeiler in
+`tokens.css`.
+
+Der Hero-Aufbau bestätigt die dokumentierte Reihenfolge: Eyebrow („MacBook Neo"),
+riesige Headline, ein einzelner CTA, Preiszeile, Produktbild darunter.
+
+---
+
+## 9 Nicht verfügbar
+
+Die Seite führt einen Abschnitt **„Agent Prompt Guide"**. Sein Inhalt wird nicht
+ausgeliefert: Im RSC-Payload steht nur die Referenz `"$1e"`, und Zeile `1e` fehlt
+in jeder Antwort — bei drei aufeinanderfolgenden Abrufen byteidentisch. Der
+Abschnitt ist serverseitig gesperrt, vermutlich für angemeldete Konten.
+
+Wer bei Refero angemeldet ist, sieht ihn auf der Style-Seite und kann ihn kopieren.
+Alles andere auf der Seite liegt vollständig in `reference-style.json`.
+
+---
+
+## 10 Bekannte Fehler in der Vorlage
 
 Zwei Werte liefert Refero fehlerhaft. Sie wurden bewusst **nicht** übernommen:
 

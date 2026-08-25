@@ -23,6 +23,8 @@ styles/main.css     Layout und Komponenten
 scripts/main.js     Navigation, Einblenden, FAQ, Formular
 assets/img/         SVG-Bildwelt und Favicon
 DESIGN.md           Die Design-Architektur, aus der gebaut wurde
+REFERENCE-STYLE.md  Die vollständige Vorlage: redaktionelle Fassung + Messdaten
+reference-style.json Referos Rohdaten (30 Typo-Stufen, 54 Abstände, 23 Farben)
 CONTENT.md          Seitenplan und Texte
 ```
 
