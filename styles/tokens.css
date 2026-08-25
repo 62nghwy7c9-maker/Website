@@ -12,7 +12,7 @@
   --c-ink:         #1d1d1f;
   --c-ink-2:       #474747;
   --c-ink-3:       #707070;
-  --c-ink-4:       #86868b;
+  --c-ink-4:       #777779;  /* „Quiet Dot" der Vorlage */
   --c-hairline:    #d6d6d6;
 
   --s-0:           #ffffff;  /* Seite, Karten */
@@ -43,6 +43,7 @@
   --t-heading-lg:  clamp(38px, 6.6vw, 80px);
   --t-heading:     clamp(32px, 5vw, 56px);
   --t-heading-sm:  clamp(26px, 3.4vw, 40px);
+  --t-subheading:  clamp(24px, 2.6vw, 32px);
   --t-body-lg:     clamp(21px, 2.2vw, 28px);
   --t-body:        21px;
   --t-body-sm:     17px;
