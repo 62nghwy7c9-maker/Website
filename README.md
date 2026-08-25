@@ -25,6 +25,8 @@ assets/img/         SVG-Bildwelt und Favicon
 DESIGN.md           Die Design-Architektur, aus der gebaut wurde
 REFERENCE-STYLE.md  Die vollständige Vorlage: redaktionelle Fassung + Messdaten
 reference-style.json Referos Rohdaten (30 Typo-Stufen, 54 Abstände, 23 Farben)
+DESIGN-PRINCIPLES.md Auswertung von 51 Designsystemen — worin sie sich einig sind
+library-analysis.json Der Datensatz dazu (Fremddaten, siehe Hinweis unten)
 CONTENT.md          Seitenplan und Texte
 ```
 
@@ -38,8 +40,17 @@ Kurz: Weiß und `#f5f5f7` im Wechsel statt Trennlinien, ein einziger blauer Akze
 (`#0071e3`, nur für gefüllte CTAs), riesige Headlines mit negativer Laufweite,
 28 px Radius auf allem Flächigen, keine Schatten.
 
+## Hinweis zu den Referenzdaten
+
+`reference-style.json` und `library-analysis.json` sind aus der Refero-Bibliothek
+extrahierte Fremddaten — nützlich als interne Referenz beim Weiterbauen. Wenn
+dieses Repository öffentlich wird, sollten beide Dateien vorher raus; die
+Auswertungen in `DESIGN-PRINCIPLES.md` und `REFERENCE-STYLE.md` stehen für sich.
+
 ## Was vor dem Livegang zu tun ist
 
+- **northStar formulieren** — der Satz, an dem jede neue Komponente gemessen wird.
+  Vorschlag und Begründung in `DESIGN-PRINCIPLES.md`.
 - **Firmendaten** in `impressum.html` und `datenschutz.html` ersetzen (mit `[ ]` markiert),
   Texte rechtlich prüfen lassen. Für die AGB gibt es bewusst keine Vorlage.
 - **Kontaktformular**: Es sendet derzeit nichts an einen Server, sondern öffnet das
