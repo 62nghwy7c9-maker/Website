@@ -190,6 +190,16 @@
       <h2 class="h-section">Vom ersten Gespräch zum laufenden Agenten in vier Schritten.</h2>
     </div>
 
+    <!-- Bühne: wird von scripts/stage.js eingeschaltet, sonst bleibt sie aus.
+         Der Inhalt steht vollständig in den Karten darunter — deshalb
+         aria-hidden, damit Screenreader ihn nicht doppelt vorlesen. -->
+    <div class="stage" data-stage aria-hidden="true">
+      <div class="stage__track">
+        <canvas class="stage__canvas" data-stage-canvas></canvas>
+        <p class="stage__caption" data-stage-caption>01 · Audit</p>
+      </div>
+    </div>
+
     <div class="steps">
       <article class="step" data-reveal>
         <p class="step__num num">01</p>
@@ -575,5 +585,6 @@
 </footer>
 
 <script src="scripts/main.js"></script>
+<script src="scripts/stage.js"></script>
 </body>
 </html>

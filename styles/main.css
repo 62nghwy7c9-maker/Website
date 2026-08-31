@@ -632,3 +632,55 @@ a:hover { text-decoration: underline; }
 
 /* Das Formular ist ein Grid — hier zählt justify-self, nicht align-self. */
 .form__submit { justify-self: start; }
+
+/* ============================================================
+   Vorgehen-Bühne
+
+   Eine gepinnte Fläche, durch die beim Scrollen eine Lichtfuge wandert.
+   Sie ist Zugabe, nicht Träger: ohne JavaScript oder WebGL bleibt sie
+   ausgeblendet, und die vier Schritt-Karten stehen für sich.
+   Deshalb ist `display: none` der Ausgangszustand — sichtbar wird sie
+   erst, wenn scripts/stage.js `is-live` setzt.
+   ============================================================ */
+
+.stage { display: none; }
+
+.stage.is-live {
+  display: block;
+  /* Scrollweg der Bühne: der Teil über 100vh ist die Strecke,
+     über die sich die vier Fugen füllen. */
+  height: 220vh;
+  margin-block: clamp(24px, 4vw, 48px);
+}
+
+.stage__track {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 3vw, 32px);
+}
+
+.stage__canvas {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 46vh, 440px);
+}
+
+/* Monochrom wie das übrige UI — die Farbe bleibt im Bild. */
+.stage__caption {
+  margin: 0;
+  font-size: var(--t-caption);
+  letter-spacing: -0.224px;
+  color: var(--c-ink-3);
+  font-variant-numeric: tabular-nums;
+  transition: opacity var(--dur) var(--ease);
+}
+
+/* Bei „prefers-reduced-motion" wird nichts gepinnt und nichts bewegt:
+   ein einzelnes, fertig gebautes Bild im Fluss der Seite. */
+.stage.is-live.is-static { height: auto; }
+.stage.is-static .stage__track { position: static; height: auto; }

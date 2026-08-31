@@ -21,6 +21,7 @@ agb.html            Hinweis statt Vorlage — AGB gehören zur Anwältin
 styles/tokens.css   Alle Design-Tokens. Wer den Look ändern will, ändert nur diese Datei.
 styles/main.css     Layout und Komponenten
 scripts/main.js     Navigation, Einblenden, FAQ, Formular
+scripts/stage.js    Die Vorgehen-Bühne (WebGL, scrollgesteuert) — reine Zugabe
 assets/img/         SVG-Bildwelt und Favicon
 DESIGN.md           Die Design-Architektur, aus der gebaut wurde
 REFERENCE-STYLE.md  Die vollständige Vorlage: redaktionelle Fassung + Messdaten
@@ -39,6 +40,26 @@ Die Regeln stehen in `DESIGN.md`, die Werte in `styles/tokens.css`.
 Kurz: Weiß und `#f5f5f7` im Wechsel statt Trennlinien, ein einziger blauer Akzent
 (`#0071e3`, nur für gefüllte CTAs), riesige Headlines mit negativer Laufweite,
 28 px Radius auf allem Flächigen, keine Schatten.
+
+## Die Vorgehen-Bühne
+
+Im Abschnitt „Vorgehen" liegt über den vier Schritt-Karten eine gepinnte Fläche:
+ein Riegel aus mattem Aluminium mit einer gefrästen Nut, durch die beim Scrollen
+Licht wandert — ein Segment je Schritt. Gerechnet wird das in einem WebGL-Shader
+(`scripts/stage.js`), die Scrollposition wird auf einen Wert 0…1 abgebildet und
+als Uniform hineingereicht. Kein Video, keine Bibliothek, kein Build-Schritt;
+die Datei wiegt rund 9 KB.
+
+Die Bühne ist **Zugabe, nicht Träger**. Sie schaltet sich nur ein, wenn JavaScript
+und WebGL da sind und das Fenster mindestens 700 px breit ist. Bei
+`prefers-reduced-motion` steht sie still und zeigt ein einzelnes fertiges Bild.
+In allen anderen Fällen bleibt sie per `display: none` aus. Die vier Karten
+darunter tragen den Inhalt immer vollständig — sie sind die Quelle, aus der die
+Bühne ihre Beschriftung liest, und stehen genau einmal im HTML.
+
+Farblich hält sie sich an die Regeln aus `DESIGN.md`: Der Akzent `#0071e3`
+erscheint hier als Licht **im Bild**, nicht als UI-Fläche. Das übrige Element —
+auch die Beschriftung — bleibt monochrom.
 
 ## Hinweis zu den Referenzdaten
 
