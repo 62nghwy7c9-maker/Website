@@ -322,12 +322,40 @@ riesige Headline, ein einzelner CTA, Preiszeile, Produktbild darunter.
 
 ---
 
+### Verläufe
+
+Die Messung findet 10 Verläufe. Drei liegen vollständig vor, alle drei stammen
+erkennbar aus eingebetteten Fremdinhalten und nicht aus dem Designsystem selbst:
+
+- `linear-gradient(90deg, #0090f7, #ba62fc, #f2416b, #f55600, #1d1d1f 50%)`
+- `linear-gradient(108deg, #0090f7, #ba62fc, #f2416b, #f55600)`
+- `linear-gradient(to right, #056bbd, #09b54e)`
+
+Bei den übrigen sieben ist nur die Farbstoppliste da (49 bis 113 Stopps), die
+CSS-Deklaration selbst fehlt — sie liegt im nicht ausgelieferten Zeilenblock,
+siehe Abschnitt 9.
+
+Für die Praxis ändert das nichts: Die DONT-Liste verbietet Verläufe auf
+UI-Flächen ausdrücklich. Sie gehören zu Produktbildern, nicht zum System.
+
+---
+
 ## 9 Nicht verfügbar
 
-Die Seite führt einen Abschnitt **„Agent Prompt Guide"**. Sein Inhalt wird nicht
-ausgeliefert: Im RSC-Payload steht nur die Referenz `"$1e"`, und Zeile `1e` fehlt
-in jeder Antwort — bei drei aufeinanderfolgenden Abrufen byteidentisch. Der
-Abschnitt ist serverseitig gesperrt, vermutlich für angemeldete Konten.
+Der Server liefert einen zusammenhängenden Block von acht Zeilen nicht aus:
+`17` bis `1e`. Alles davor und danach kommt an.
+
+Darin stecken zwei Dinge:
+
+1. **Sieben Verlaufs-Deklarationen** (`$17`–`$1d`). Deren Farbstopps liegen vor,
+   nur die CSS-Zeichenkette fehlt.
+2. **Der Abschnitt „Agent Prompt Guide"** (`$1e`) — die Anleitung, die Refero für
+   KI-Agenten mitliefert. Im Payload steht nur die Referenz.
+
+Bei drei aufeinanderfolgenden Abrufen war die Antwort byteidentisch, auch über
+den RSC-Endpunkt, der die übrigen nachgelagerten Zeilen sehr wohl bringt. Der
+Block ist also nicht langsam, sondern gesperrt — vermutlich für angemeldete
+Konten.
 
 Wer bei Refero angemeldet ist, sieht ihn auf der Style-Seite und kann ihn kopieren.
 Alles andere auf der Seite liegt vollständig in `reference-style.json`.
