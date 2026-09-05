@@ -29,31 +29,74 @@ Risiko: Es kann aufdringlich wirken. Deshalb nur nach der Ankündigung durch dei
 Vater, nie kalt, und immer mit dem Satz „wenn nicht, lösche ich sie" als echtem
 Ausweg.
 
-## 2 Der zweite Hebel: Preis unter die Zögerschwelle
+## 2 Der Preis — entschieden: 0 € Einrichtung, 49 €/Monat
 
-Eine Rechnung über 1.500 € ist eine Entscheidung. 79 € im Monat ist keine — das
-ist weniger als der Blumenschmuck im Empfang.
+**12 Monate Mindestlaufzeit, danach monatlich kündbar.**
 
-Empfehlung: **0 € Einrichtung, 79 €/Monat, 12 Monate Mindestlaufzeit.**
-Wer lieber einmal zahlt: **890 € einmalig + 29 €/Monat für Hosting und Pflege.**
-Wer 12 Monate im Voraus zahlt, bekommt zwei Monate frei (holt Geld nach vorn).
+Vier Gründe, der vierte ist der eigentliche:
 
-Warum Monatsmodell statt Einmalpreis, obwohl es das Geld später bringt:
-- Der Abschluss ist schneller, und Geschwindigkeit ist dein Ziel.
-- Wiederkehrende Einnahmen sind das, was aus 20 Aufträgen ein Geschäft macht.
-  20 × 79 € sind 1.580 € jeden Monat, ohne neue Kunden.
-- Pflege ist der Grund, warum Kunden bleiben, und Bleiben ist billiger als
-  Gewinnen.
+1. **Niedrigere Hürde als jeder Einmalpreis.** Heute zahlt der Kunde nichts. Es gibt
+   keinen Betrag, über den er nachdenken muss — nur eine Unterschrift.
+2. **Deine Kosten laufen weiter.** Domain, Hosting und Support hören nach dem Verkauf
+   nicht auf. Bei einer Einmalzahlung zahlst du ab Jahr zwei drauf.
+3. **Kündbarkeit verkauft.** „Wenn Sie unzufrieden sind, hören Sie auf zu zahlen"
+   nimmt genau das Risiko weg, das ihn bei einer Schülerin zögern lässt.
+4. **Der Bestand arbeitet für dich.** Bei Einmalpreisen musst du jeden Monat neu
+   verkaufen. 20 Kunden × 49 € sind **980 € jeden Monat, ohne einen neuen Verkauf.**
+   Das ist der Unterschied zwischen Jobben und einem Geschäft.
 
-Was drin ist (schriftlich fixieren, sonst frisst dich der Umfang auf):
-- bis 5 Seiten, mobil, Kontaktformular, Impressum/Datenschutz-Gerüst
-- Domain, Hosting, SSL (Verschlüsselung, das Schloss im Browser)
-- **eine** Textänderungsrunde vor Livegang, danach: 2 Änderungen pro Monat inklusive
-- Was nicht drin ist: Shop, Buchungssystem, Logo, Fotoshooting, Texte neu erfinden
+Die Mindestlaufzeit ist der Gegenwert für die kostenlose Einrichtung — sonst kündigt
+jemand nach zwei Monaten und du hast umsonst gebaut. In einem Satz erklärbar: „Die
+Einrichtung kostet Sie nichts, dafür läuft der Vertrag ein Jahr."
+
+**Bekannter Nachteil:** Das Geld kommt langsam. Fünf Kunden im ersten Monat sind
+245 €, nicht 1.000 €. Wer 12 Monate im Voraus zahlt, bekommt zwei Monate frei — das
+holt Geld nach vorn, ohne das Modell aufzugeben.
+
+### Was drin ist
+
+- bis 5 Seiten, mobil, Kontaktformular, Impressum- und Datenschutz-Gerüst
+- Domain, Hosting, SSL-Verschlüsselung (das Schloss im Browser)
+- **Pflegeseite mit Zugangscode** (siehe unten)
+- eine Textänderungsrunde vor Livegang, danach 2 Änderungen pro Monat inklusive
+
+### Was nicht drin ist
+
+Shop, Buchungssystem, Logo, Fotoshooting, Texte neu erfinden.
 
 Kalkulation grob und ungeprüft: Domain ca. 10–20 €/Jahr, Hosting auf einem
-Gratis-Tarif (GitHub Pages, Netlify o. ä.) 0 €. Die Marge ist nicht das Problem,
-die Zeit ist es.
+Gratis-Tarif (Netlify, GitHub Pages) 0 €. Die Marge ist nicht das Problem, die Zeit
+ist es.
+
+## 2a Die Pflegeseite — bewusst klein halten
+
+Der Kunde bekommt eine eigene Adresse mit Zugangscode, auf der er selbst Daten ändern
+kann. Das ist der Grund, warum das Monatsmodell überhaupt skaliert.
+
+**Aber: keine Seite bauen, auf der er alles ändern kann.** Ein 55-jähriger Dachdecker
+loggt sich in ein vollwertiges Redaktionssystem nie ein — er ruft an. Was er
+tatsächlich ändern will, sind vier Dinge:
+
+- Öffnungszeiten
+- Telefonnummer und E-Mail
+- „Aktuelles" (Betriebsurlaub, kurze Meldung)
+- eine Stellenanzeige
+
+**Genau diese vier Felder bauen.** Vier Kästen, ein Speichern-Knopf, Zugangscode
+davor. Das deckt fast alle echten Änderungswünsche ab, ist an einem Nachmittag
+gebaut und braucht keine Erklärung. Ein vollwertiges Redaktionssystem wäre zehnmal
+so viel Arbeit und würde seltener benutzt.
+
+### „Einmal verkaufen und nie wieder anfassen" — fast
+
+Von selbst laufen: Hosting, Verschlüsselung, die Seite. Da passiert jahrelang nichts.
+Trotzdem kommen: „Ich komm nicht rein", „die Seite ist weg" (meist eine abgelaufene
+Domain), „können Sie kurz…". Rechne mit **ein bis zwei Kontakten pro Kunde und Jahr.**
+Bei 20 Kunden sind das ein paar Stunden im Jahr, bei 100 Kunden ist es ein Job.
+
+Genau dafür sind die 49 € da. Ein Monatsbetrag für „ich fasse es nie wieder an" wäre
+unehrlich. Ein Monatsbetrag für „es läuft, und wenn etwas ist, kümmert sich jemand"
+ist richtig.
 
 ## 3 Wen ansprechen — das Punkteschema für die Leadliste
 

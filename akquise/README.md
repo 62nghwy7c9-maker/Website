@@ -1,9 +1,11 @@
 # Akquise
 
-- `AKQUISE.md` — Strategie, Filterschema, Ansprachetexte, Einwände, Abbruchregel.
-- `leads-vorlage.csv` — Arbeitstabelle für die Leadliste. Semikolon-getrennt,
-  öffnet sich direkt in Excel. Die beiden Zeilen darin sind Beispiele und gehören
-  gelöscht, sobald echte Kontakte drin stehen.
+- `AKQUISE.md` — Strategie, Preis, Filterschema für die Leadliste, Ansprachetexte,
+  Einwände, Domain-Übergabe, Abbruchregel.
+- `ANLEITUNG-DOMAIN.md` — Schritt-für-Schritt zum gemeinsamen Durchgehen und Üben.
+  Einmal an einer eigenen Testdomain durchspielen, bevor der erste Kundentermin steht.
+- `leads-vorlage.csv` — Arbeitstabelle für die Leadliste. Semikolon-getrennt, öffnet
+  sich in Excel. Die beiden Zeilen darin sind Beispiele und gehören gelöscht.
 
-Die Punktwerte stehen in den Spaltenüberschriften. Summe in „Punkte",
-Stufe A ab 9, B ab 6, alles darunter C.
+**Entschieden:** 0 € Einrichtung, 49 €/Monat, 12 Monate Mindestlaufzeit.
+**Offen:** Vertragspartner (Kira oder Papa) und der Ansprachekanal.
