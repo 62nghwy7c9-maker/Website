@@ -205,7 +205,69 @@ Für den Livegang der Schulseite trotzdem eine Rechnung schreiben und sie auf 0 
 setzen mit Vermerk „Referenzprojekt". Damit steht ein Wert im Raum, und der nächste
 Kunde bekommt keinen Nulltarif erklärt.
 
-## 7 Die ersten drei Wochen
+## 7 Übergabe: die Domain anschließen
+
+Der Kunde behält seine Adresse (`musterdach.de`), du hängst nur die neue Seite
+dahinter. Fachlich: **DNS umbiegen** — DNS (Domain Name System) ist das Telefonbuch
+des Internets, es übersetzt die Adresse in den Ort, an dem die Dateien liegen.
+
+**Nicht verwechseln:**
+
+| DNS umbiegen — das ist gemeint | Domain umziehen — nicht nötig |
+|---|---|
+| Adresse bleibt beim bisherigen Anbieter | Domain wechselt den Anbieter |
+| 15 Minuten, sichtbar nach bis zu 24 Stunden | mehrere Tage |
+| zwei Zeilen ändern | AuthCode, Kündigung, neuer Vertrag |
+| kein Risiko für E-Mails | Postfächer können verloren gehen |
+
+### Vor der Zusage eines Livegang-Termins fragen
+
+> „Haben Sie die Zugangsdaten zu Ihrer Domain — oder wer bekommt die Jahresrechnung
+> für die Website?"
+
+Liegt die Domain bei der alten Agentur, braucht es doch einen echten Umzug samt
+AuthCode; zwei bis vier Wochen Verzug sind normal. Häufigster Grund für einen
+geplatzten Termin. Die Jahresrechnung verrät den Anbieter zuverlässig — öffentliche
+Abfragen zeigen seit der DSGVO kaum noch, wem eine `.de`-Domain gehört.
+
+### Ablauf
+
+1. **Screenshot des kompletten DNS-Bereichs**, bevor irgendetwas geändert wird.
+2. **Nur A- oder CNAME-Einträge ändern. MX und TXT niemals anfassen.**
+   MX (Mail Exchange) steuert, wohin die E-Mails gehen. Wer sie löscht, kappt
+   `info@firma.de`. Das ist der eine Fehler, der sofort einen Kunden kostet.
+3. Zugang holen, in dieser Reihenfolge:
+   **a)** Bildschirmübertragung im Videoanruf, 15 Minuten — Standardweg, er behält
+   sein Passwort · **b)** eigener eingeschränkter Nutzer beim Provider ·
+   **c)** Anleitung mit exakten Werten zum Selbermachen (scheitert meist).
+   **Nie das Passwort des Kunden annehmen.** Was danach mit seiner Domain passiert,
+   warst dann immer du.
+4. **Domain immer auf den Kunden registriert**, du hast nur Verwaltungszugriff.
+   Nimmt den größten Einwand weg: „Die Adresse gehört Ihnen, ich verwalte sie nur."
+5. **Weiterleitungen** für alte Unterseiten setzen (Redirects — Regeln, die alte
+   Adressen auf die neuen schicken), sonst laufen bestehende Google-Treffer ins Leere.
+
+### Zwei Sätze, die der Kunde vorher hören muss
+
+- „Bis zu 24 Stunden, dann ist die Seite überall zu sehen." Sonst ruft er nach zehn
+  Minuten an. (Grund: DNS-Änderungen verteilen sich verzögert durchs Netz.)
+- „Kündigen Sie **nur das Webhosting**. Nicht die Domain, nicht die E-Mail-Postfächer."
+  Bei den meisten Anbietern steckt alles in einem Paket. Kündigt er das Paket, ist die
+  Adresse zwei Wochen später frei und `info@…` tot — und es sieht nach deinem Fehler aus.
+
+### Verkaufsargument daraus
+
+„Ihre Adresse bleibt, Ihre Google-Treffer bleiben, nur die Seite dahinter wird neu."
+Eine neue Domain hieße bei Google von vorn anfangen.
+
+### Was remote geht und was nicht
+
+Alles per Telefon und Mail — Texte, Freigabe, Änderungen, Auftragsbestätigung.
+Ausnahme: **Fotos.** Bei Handwerkern der größte sichtbare Unterschied zwischen
+billig und gut. Handyfotos des Kunden reichen meist; bei den ersten drei Kunden
+trotzdem hinfahren, weil du drei richtig gute Referenzen brauchst.
+
+## 8 Die ersten drei Wochen
 
 **Woche 1 (ohne Leadliste möglich):** Angebot und Preis festschreiben. Rechtliches
 anstoßen (Abschnitt 8). Förderverein ansprechen. Drei Betriebe aus dem eigenen
@@ -224,7 +286,7 @@ später.
 fast keine Arbeit mehr — Aufbau, Struktur und halbe Texte stehen. Deshalb: nicht
 breit streuen, sondern eine Branche leerräumen, dann die nächste.
 
-## 8 Abbruchregel
+## 9 Abbruchregel
 
 Nach den ersten zehn Stufe-A-Ansprachen zählen:
 
@@ -239,7 +301,7 @@ Nach den ersten zehn Stufe-A-Ansprachen zählen:
 Diese Regel schützt das Wertvollste, das du hast: die Kontakte deines Vaters.
 Die gibt es nur einmal.
 
-## 9 Was vorher geklärt sein muss
+## 10 Was vorher geklärt sein muss
 
 Keiner dieser Punkte ist von mir geprüft — das gehört zu Steuerberater und
 Anwältin, nicht in ein Strategiepapier:
@@ -255,7 +317,7 @@ Anwältin, nicht in ein Strategiepapier:
 - **Impressum und Datenschutzerklärung** jeder Kundenseite. Du lieferst das Gerüst,
   die Verantwortung dafür trägt der Kunde. Schriftlich festhalten.
 
-## 10 Ein Widerspruch, der auffliegen wird
+## 11 Ein Widerspruch, der auffliegen wird
 
 Die bestehende Seite in diesem Repository verkauft KI-Agenten-Projekte ab 18.000 €
 und Audits ab 4.900 €. Wenn ein Dachdecker, dem du eine Website für 79 € im Monat
