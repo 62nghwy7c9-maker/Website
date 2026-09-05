@@ -1,0 +1,3 @@
+Firma;Branche;Ort;Ansprechpartner;Beziehung Vater (0/2/3);Entscheider erreichbar (0/2);Website-Zustand (keine=2 / kaputt-oder-alt=3 / gepflegt=-3);Google-Profil gepflegt (0/2);Kunden suchen online (0/2);Groesse ueber 50 MA (0/-2);Ausschlussgrund;Punkte;Stufe (A/B/C);Naechster Schritt;Status
+Beispiel Bedachungen GmbH;Dachdecker;Buxtehude;H. Berger;3;2;3;2;2;0;;12;A;Demo bauen;offen
+Beispiel Zulieferer KG;Metallbau;Stade;;0;2;-3;0;0;-2;Feste Stammkunden;-3;C;nicht ansprechen;raus
