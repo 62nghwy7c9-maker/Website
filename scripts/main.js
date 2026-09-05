@@ -39,6 +39,10 @@
   if (reduced || !('IntersectionObserver' in window)) {
     reveals.forEach(function (el) { el.classList.add('is-in'); });
   } else {
+    // Erst jetzt verstecken — vorher war alles sichtbar und bleibt es,
+    // falls dieses Skript gar nicht läuft.
+    document.documentElement.classList.add('reveal-ready');
+
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
