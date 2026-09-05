@@ -1,12 +1,23 @@
 # Webgewerk — Inhalts- & Seitenplan (DE)
 
-Positionierung: KI-Agentur aus Deutschland. Wir bauen KI-Agenten und Automatisierungen,
-die im Tagesgeschäft wirklich laufen — kein Prototyp-Theater. Name = "Gewerk":
-Handwerk, sauber ausgeführt, abnahmefähig.
+Positionierung: Der Markt für KI-Werkzeuge ist überfüllt — und genau das ist der
+Ausgangspunkt. Webgewerk verkauft nicht das Bauen (das ist der billigste Teil),
+sondern die Entscheidung: welcher Vorgang sich überhaupt lohnt, was mit den
+Ausnahmen passiert, wie es an Altsysteme kommt, ob es hinterher jemand benutzt,
+und wer haftet. Name = "Gewerk": Handwerk, sauber ausgeführt, abnahmefähig.
 
-Claim: **Wir bauen KI-Agenten, die arbeiten.**
-Subline: Webgewerk plant, entwickelt und betreibt KI-Systeme für Unternehmen im
-deutschsprachigen Raum — vom ersten Prozess-Audit bis zum Agenten im Livebetrieb.
+Claim: **Die Software ist nicht Ihr Problem.**
+Subline: Werkzeuge gibt es genug. Die Frage ist, welcher Vorgang sich überhaupt
+lohnt — und was davon im Betrieb hält.
+
+Was nicht kopierbar ist (die fünf Punkte, auf denen die Seite steht):
+1. Zu wissen, welcher Vorgang sich lohnt. Die meisten lohnen nicht. Das sagt kein
+   Anbieter, der Lizenzen verkauft.
+2. Die letzten 20 Prozent — Sonderfall, Ausnahme, der Beleg außerhalb des Schemas.
+   Daran sterben Automatisierungen.
+3. Altsysteme ohne saubere Schnittstelle. Wo kein API ist, hilft kein Tool.
+4. Dass Leute es benutzen und dem Ergebnis trauen. Keine Technikfrage.
+5. Verantwortung, wenn der Agent falsch liegt. Ein Tool haftet nicht.
 
 ## Navigation
 Leistungen · Vorgehen · Arbeiten · Über uns · Kontakt

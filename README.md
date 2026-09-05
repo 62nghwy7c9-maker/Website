@@ -72,6 +72,13 @@ Auswertungen in `DESIGN-PRINCIPLES.md` und `REFERENCE-STYLE.md` stehen für sich
 
 ## Was vor dem Livegang zu tun ist
 
+- **Die drei Kennzahlen im Hero durch echte ersetzen** (112 geprüft / 38 automatisiert
+  / 74 abgeraten). Die ganze Positionierung steht auf der dritten Zahl. Erfundene
+  Zahlen wären hier schädlicher als gar keine — im Zweifel den Block entfernen,
+  bis belastbare Werte vorliegen. Im HTML ist die Stelle kommentiert.
+- **Die drei Beispiele unter „Wovon wir abraten" durch echte Fälle ersetzen.**
+  Sie sind das stärkste Argument der Seite und zugleich das, was am schnellsten
+  auffliegt, wenn es erfunden ist.
 - **northStar formulieren** — der Satz, an dem jede neue Komponente gemessen wird.
   Vorschlag und Begründung in `DESIGN-PRINCIPLES.md`.
 - **Firmendaten** in `impressum.html` und `datenschutz.html` ersetzen (mit `[ ]` markiert),
@@ -80,8 +87,7 @@ Auswertungen in `DESIGN-PRINCIPLES.md` und `REFERENCE-STYLE.md` stehen für sich
   E-Mail-Programm mit vorbereiteter Nachricht. Für echten Versand in
   `scripts/main.js` die markierte Stelle durch ein `fetch()` auf einen Endpunkt
   ersetzen — und dann Abschnitt 3 der Datenschutzerklärung anpassen.
-- **Kennzahlen und Referenzen** (40+ Agenten, 62 %, die drei Cases) sind Platzhalter.
-  Vor Veröffentlichung durch belegbare Zahlen ersetzen oder streichen.
+- **Die drei Cases unter „Arbeiten"** sind ebenfalls Platzhalter.
 - **Kontaktdaten**: `moin@webgewerk.de` und die Telefonnummer sind erfunden.
 - **Bilder**: Die SVGs in `assets/img/` sind handgebaute Platzhalter im Stil der
   Vorlage. Echte Produktfotos gehören dorthin — hochkey, freigestellt, schattenlos.
