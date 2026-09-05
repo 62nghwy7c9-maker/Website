@@ -23,12 +23,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Pages einrichten
-        # enablement schaltet Pages beim ersten Lauf selbst frei,
-        # damit niemand es in den Repo-Einstellungen anklicken muss.
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
+      # Kein actions/configure-pages hier. Der Schritt kann Pages nicht selbst
+      # freischalten — dafür braucht es Administrationsrechte, die GITHUB_TOKEN
+      # nicht bekommt ("Resource not accessible by integration"). Seine Ausgaben
+      # (Basis-URL, Basis-Pfad) brauchen wir ohnehin nicht, weil alle Verweise
+      # in der Seite relativ sind und damit unter jedem Unterpfad stimmen.
+      #
+      # Einmalig von Hand nötig: Repo → Settings → Pages → Source: GitHub Actions.
+      # Danach läuft alles Weitere ohne Zutun.
 
       - name: Website zusammenstellen
         # Bewusst nur die Seite selbst. Die Referenzdaten aus der

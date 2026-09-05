@@ -40,6 +40,29 @@ Kurz: Weiß und `#f5f5f7` im Wechsel statt Trennlinien, ein einziger blauer Akze
 (`#0071e3`, nur für gefüllte CTAs), riesige Headlines mit negativer Laufweite,
 28 px Radius auf allem Flächigen, keine Schatten.
 
+## Veröffentlichen
+
+Die Seite wird über GitHub Actions auf GitHub Pages veröffentlicht
+(`.github/workflows/pages.yml`). Bei jedem Push auf `webgewerk-site` läuft der
+Workflow; er stellt das Paket zusammen, prüft, ob jede verlinkte Datei darin
+liegt, und deployt.
+
+**Einmalig nötig, und nur von einer Person mit Repo-Rechten:**
+Settings → Pages → Source auf **GitHub Actions** stellen. Der Workflow kann das
+nicht selbst — Pages anzulegen braucht Administrationsrechte, die `GITHUB_TOKEN`
+grundsätzlich nicht bekommt. Danach läuft alles Weitere ohne Zutun; ein bereits
+fehlgeschlagener Lauf lässt sich unter Actions per „Re-run jobs" wiederholen.
+
+Die Adresse lautet dann `https://62nghwy7c9-maker.github.io/Website/`.
+
+Veröffentlicht werden nur `index.html`, die drei Rechtsseiten, `styles/`,
+`scripts/`, `assets/` und `robots.txt`. Die Referenzdaten bleiben draußen.
+
+`robots.txt` sperrt die Seite derzeit für Suchmaschinen, weil sie noch
+erfundene Kennzahlen und unvollständige Firmenangaben enthält. Vor dem echten
+Livegang: Datei löschen und in `index.html` wieder ein
+`<link rel="canonical">` auf die richtige Domain setzen.
+
 ## Hinweis zu den Referenzdaten
 
 `reference-style.json` und `library-analysis.json` sind aus der Refero-Bibliothek
