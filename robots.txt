@@ -1,0 +1,7 @@
+# Diese Seite enthält noch Platzhalter: erfundene Kennzahlen, anonymisierte
+# Beispielprojekte und unvollständige Firmenangaben. Bis das ersetzt ist,
+# soll sie nicht in Suchmaschinen auftauchen.
+# Vor dem echten Livegang: diese Datei löschen und in index.html wieder
+# ein <link rel="canonical"> auf die richtige Domain setzen.
+User-agent: *
+Disallow: /

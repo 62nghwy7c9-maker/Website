@@ -1,0 +1,72 @@
+name: GitHub Pages
+
+# Bei jedem Push auf den Standard-Branch neu veröffentlichen.
+# Über "Actions → GitHub Pages → Run workflow" auch von Hand auslösbar.
+on:
+  push:
+    branches: [webgewerk-site]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Läuft ein Deployment noch, wartet das nächste, statt es abzubrechen.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pages einrichten
+        # enablement schaltet Pages beim ersten Lauf selbst frei,
+        # damit niemand es in den Repo-Einstellungen anklicken muss.
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Website zusammenstellen
+        # Bewusst nur die Seite selbst. Die Referenzdaten aus der
+        # Refero-Bibliothek (reference-style.json, library-analysis.json)
+        # und die internen Notizen bleiben draußen — sie sind Fremddaten
+        # und gehören nicht ins öffentliche Netz.
+        run: |
+          mkdir -p _site
+          cp index.html impressum.html datenschutz.html agb.html robots.txt _site/
+          cp -r styles scripts assets _site/
+          touch _site/.nojekyll
+          echo "Veröffentlicht wird:"
+          find _site -type f | sort
+
+      - name: Auf fehlende Dateien prüfen
+        # Ein toter Verweis fällt hier auf, nicht erst der Besucherin.
+        run: |
+          fehler=0
+          for f in $(grep -ho '\(href\|src\)="[^"#:]*"' _site/*.html \
+                     | sed 's/.*="//;s/"//' | sort -u); do
+            if [ ! -e "_site/$f" ]; then
+              echo "FEHLT: $f"
+              fehler=1
+            fi
+          done
+          [ "$fehler" -eq 0 ] && echo "Alle verlinkten Dateien vorhanden."
+          exit $fehler
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
